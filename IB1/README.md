@@ -14,7 +14,7 @@ The chemical potential conitnuity is assumed to be ensure by the continuity of t
 *For example purpose, to be checked*
 
 - [TMAP7 input file](input/IB1_TMAP_input.txt)
-- [FESTIM (version 09.2020](input/IB1_FESTIM_input.txt)
+- [FESTIM (version 09.2020)](input/IB1_FESTIM_input.py)
 
 ## Available output file
 
