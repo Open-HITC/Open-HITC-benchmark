@@ -3,6 +3,11 @@
 
 To demonstrate the diversity of codes used in the community and the need to define common test cases, some identified codes used in the fusion community are listed
 
+DIFFUSE - 1978 <br>
+https://doi.org/10.1016/0022-3115(78)90160-5
+
+PIDAT - 1989 <br>
+https://doi.org/10.1016/0022-3115(89)90596-5
 
 Tritium Migration Analysis Program (TMAP) v7 - 2008 <br>
 https://inldigitallibrary.inl.gov/sites/STI/STI/4215154.pdf <br>
@@ -30,7 +35,7 @@ https://github.com/festim-dev/FESTIM
 mHIT - 2021 <br>
 https://doi.org/10.1016/j.fusengdes.2021.112740
 
-Tritium Migration Analysis Program (TMAP) v8 - 2008 <br>
+Tritium Migration Analysis Program (TMAP) v8 - 2023 <br>
 https://mooseframework.inl.gov/TMAP8/
 https://github.com/idaholab/TMAP8
 
