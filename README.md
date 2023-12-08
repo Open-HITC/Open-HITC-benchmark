@@ -4,5 +4,5 @@ Open HITC (hydrogen isotope transport code) benchmark is a qualification tool fo
 
 
 See also: 
-- [CODES.md](CODES.md) List of some existing code
+- [CODES.md](CODES.md) List of some existing codes
 - [EXAMPLES.md](EXAMPLES.md) List of some verification and validation of existing codes
