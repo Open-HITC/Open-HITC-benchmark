@@ -1,0 +1,214 @@
+title input
+Cross check test case (by ITER)
+end of title input
+$ --------------------------
+main input
+$ --------------------------
+dspcnme=t,end                                     $ diffusive species
+$sspcnme=t2,end
+espcnme=t2g,end                                   $ enclosure species
+segnds=87,102,102,end
+nbrencl=2,end
+linksegs=1,2,3,end
+end of main input
+$ -------------------------
+$ -------------------------
+enclosure input
+$ -------------------------
+$ -------------------------
+$ plasma 1
+start bdry,1,end
+etemp=tabl,3,end
+esppres=t2g,tabl,1,end
+$
+$ water
+start bdry,2,end
+etemp=tabl,4,end
+esppres=t2g,const,0.0,end
+$
+end of enclosure input
+$
+thermal input
+$
+start thermseg,1,end
+delx=0.0,8*2.5e-9,8*1e-8,4*2.5e-8,8*1e-7,4*2.5e-7,8*1e-6
+4*2.5e-6,8*1e-5,4*2.5e-5,29*2e-4,0.0,end 
+tempd=ramp,1200.0,473.0,end            $ Initial temperatures=(K)
+tcon=equ,1,end
+rhocp=equ,2,end
+hsrc=const,0.0,srcpf,87*0.0,end
+htrbcl=stemp,tabl,3,end
+htrbcr=link,end
+hgap=1.0e9,end
+$
+start thermseg,2,end
+delx=0.0,100*1e-05,0.0,end
+tempd=ramp,473.0,434.0,end            $ Initial temperatures=(K)
+tcon=equ,17,end
+rhocp=equ,18,end
+hsrc=const,0.0,srcpf,102*0.0,end
+htrbcl=link,end
+htrbcr=link,end
+hgap=1.0e9,end
+$
+start thermseg,3,end
+delx=0.0,100*1.5e-05,0.0,end
+tempd=ramp,434.0,373.0,end            $ Initial temperatures=(K)
+tcon=equ,19,end
+rhocp=equ,20,end
+hsrc=const,0.0,srcpf,102*0.0,end
+htrbcl=link,end
+htrbcr=stemp,tabl,4,end
+$
+end of thermal input
+$
+diffusion input
+$
+start diffseg,1,end
+$ Sample [DIFFSeG 1] tungsten
+nbrden=6.28e28,end 
+concd=t,87*0.0,end
+trapping=ttyp,1,tconc,0.0,85*5.0e-4,0.0           $ natural traps - whole depth range
+              tspc,t,alphr,equ,4,alpht,equ,3
+              ctrap,const,0.0
+         ttyp,2,tconc,0.0,28*5.0e-3,57*0.0,0.0    $ ion damage - 1um depth
+              tspc,t,alphr,equ,5,alpht,equ,3
+              ctrap,const,0.0,end
+qstrdr=t,const,0.0,end    $ Q*/R for Soret effect unknown
+dcoef=t,equ,6,end $ t2,equ,7,end       $ Diffusion coeff (m2/s)
+srcsd=t,tabl,5,srcpf,0.0,1*1.0,84*0.0,0.0,end 
+difbcl=ratedep,encl,1,spc,t,exch,t2g,ksubd,const,0.0,t,ksubr,equ,21,end  $
+difbcr=link,t,solcon,equ,21,end
+surfa=1.868,end
+$
+start diffseg,2,end
+$ Sample [DIFFSeG 2] copper
+nbrden=8.43e28,end
+concd=t,102*0.0,end
+trapping=ttyp,1,tconc,const,5e-5
+tspc,t,alpht,equ,10,alphr,equ,11,ctrap,const,0.0,end
+qstrdr=t,const,0.0,end    $ Q*/R for Soret effect unknown
+dcoef=t,equ,9,end     $ Diffusion coeff (m2/s)
+srcsd=t,const,0.0,srcpf,0.0,100*0.0,0.0,end
+difbcl=link,t,solcon,equ,8,end
+difbcr=link,t,solcon,equ,8,end
+surfa=1.868,end
+$
+start diffseg,3,end
+$ Sample [DIFFSeG 3] copper alloy
+nbrden=2.6096e28,end
+concd=t,102*0.0,end
+trapping=ttyp,1,tconc,const,5e-5
+tspc,t,alpht,equ,15,alphr,equ,11,ctrap,const,0.0
+         ttyp,2,tconc,const,0.04
+tspc,t,alpht,equ,15,alphr,equ,16,ctrap,const,0.0,end
+$
+qstrdr=t,const,0.0,end    $ Q*/R for Soret effect unknown
+dcoef=t,equ,13,end     $ Diffusion coeff (m2/s)
+srcsd=t,const,0.0,srcpf,0.0,100*0.0,0.0,end
+difbcl=link,t,solcon,equ,12,end
+difbcr=ratedep,encl,2,spc,t,exch,t2g,ksubd,const,0.0,t,ksubr,equ,14,end
+surfa=1.868,end
+end of diffusion input
+$
+equation input
+$ (1) Thermal conductivity of tungsten (W/m-K), fitted from ANSIS data
+y=-7.84154e-09*temp**3+5.03006e-05*temp**2-1.07335e-01*temp+1.75214e+02,end
+$ (2) Rho Cp for tungsten (J/m3K), fitted from ANSIS data
+y=5.15356e-06*temp**3-8.30703e-02*temp**2+5.98312e+02*temp+2.48160e+06,end
+$ (3) Alpht for t in tungsten (1/s)
+y=2.9e12*exp(-0.39/8.625e-5/temp)*0.8165,end
+$ (4) Alphr for trap 1 in tungsten (1/s)
+y=8.4e12*exp(-1.2/8.625e-5/temp),end
+$ (5) Alphr for trap 2 in tungsten (1/s)
+y=8.4e12*exp(-1.4/8.625e-5/temp),end
+$ (6) Diffusivity for t in tungsten (m2/s)
+y=2.9e-7*exp(-0.39/8.625e-5/temp)*0.8165,end
+$ (7) Recombination coefficient (ksubr); Ogorodnikova theory Ec = 0.2 eV
+y=3.2e-15*exp(-1.16/8.618e-5/temp),end
+$
+$Copper pipe
+$ (8) Solubility of tritium in copper (at/m3.Pa½)
+y=3.14e24*exp(-0.572/8.625e-5/temp),end  
+$ (9) diffusivity of tritium in copper (at/m3.Pa½)
+y=6.60e-7*exp(-0.387/8.625e-5/temp),end
+$ (10) Alpht for t in copper(1/s)
+y=6.60e-7*exp(-0.387/8.625e-5/temp)/((3.61e-10)**2),end
+$ (11) Alphr for trap 1 in copper(1/s)
+y=7.98e13*exp(-0.5/8.625e-5/temp),end
+$
+$Copper alloy pipe
+$ (12) solubility of tritium in CuCrZr(at/m3.Pa½)
+y=4.28e23*exp(-0.387/8.625e-5/temp),end
+$ (13) diffusivity of tritium in CuCrZr(at/m3.Pa½)
+y=3.92e-7*exp(-0.418/8.625e-5/temp),end
+$ (14) recombination of tritium in CuCrZr(at/m3.Pa½)
+y=2.9e-14*exp(-1.92/8.625e-5/temp),end
+$ (15) Alpht for t in CuCrZr(1/s)
+y=3.92e-7*exp(-0.418/8.625e-5/temp)/((3.61e-10)**2),end
+$ (16) Alphr for trap 2 in CuCrZr(1/s)
+y=7.98e13*exp(-0.83/8.625e-5/temp),end
+$
+$thermic properties copper
+$ (17) Thermal conductivity of copper (W/m-K)
+y=-3.93153e-08*temp**3+3.76147e-05*temp**2-7.88669e-02*temp+4.02301e+02,end
+$ (18) Rho Cp for copper (J/m3K)
+y=1.68402e-04*temp**3+6.14079e-02*temp**2+4.67353e+02*temp+3.45899e+06,end
+$
+$thermic properties copper alloy
+$ (19) Thermal conductivity of copper alloy (W/m-K)
+y=5.25780e-07*temp**3-6.45110e-04*temp**2+2.57678e-01*temp+3.12969e+02,end
+$ (20) Rho Cp for copper alloy(J/m3K)
+y=-1.79134e-04*temp**3+1.51383e-01*temp**2+6.22091e+02*temp+3.46007e+06,end
+$
+$ (21) Solubility of tritium in tungsten (at/m3.Pa½)
+y=1.87e24*exp(-1.04/8.618e-5/temp),end
+$
+end of equation input
+$
+table input
+$(1)Pressure tabl
+0.0,1.0e-6,506484001.0,1.0e-6,end
+$(2)Pressure tabl
+0.0,0.0,506484001.0,0.0,end
+$(3)temperature tabl
+0.0,1200.0
+99100000.0,1200.0
+99100010.0,1200.0
+end
+$(4)temperature tabl
+$0.0,373.,99100000.0,373.,end
+0.0,373.0
+99100000.0,373.0
+99100010.0,373.0
+end
+$ (5) Implantation flux (atom/m2/s)
+0.,5.e23
+99141124.,5.e23
+99141134.,0.0
+end
+end of table input
+$
+control input
+time=0.0,end         $  initial time
+tstep=1000.0,end
+timend=99100010.0,end    $  the last time computed (s)
+nprint=100,end
+itermx=10000,end
+delcmx=3.5e-6,end
+bump=1.e-3,end
+bound=4.0,end
+omega=2.0,end
+end of control input
+$
+plot input
+nplot=1,end         $ makes plotfile entry every 0.1 sec
+plotseg=1,2,end     $ segments for which plot info is needed
+plotencl=1,end      $ enclosures for which plot info is needed
+dname=t,end       $ diffusing species for which plot info is needed
+ename=t2g,end        $ enclosure species for which plot info is needed
+dplot=sflux,trapinv,end
+eplot=end        $ flow of molecules into enclosure not needed
+end of plot input
+$
+end of data
