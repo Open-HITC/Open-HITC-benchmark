@@ -21,7 +21,7 @@ The purpose of the applied test cases is to verify the operational functions of 
 - D. Trap mechanisms
     - D.1. Non-uniform spatial distribution
     - D.2. Trap creation with time
-    - D.3. Discrete multi-energetic traps
+    - D.3. Discrete mutli-occupancy traps
 - E. Multidimensionnal
     - E.1. 2D cases
     - E.2. 3D cases
