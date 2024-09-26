@@ -31,7 +31,7 @@ TESSIM, MHIMS and HIIPC for a TDS reproduction (in the frame of Eurofusion proje
 TMAP, ABAQUS and FESTIM for a diffusion in multimaterial slab <br>
 https://doi.org/10.1088/1741-4326/abd95f
 
-FESTIM, TMAP8, COMSOL for TDS and transport in 3D MB divertor
+FESTIM, TMAP8, COMSOL for TDS and transport in 3D MB divertor <br>
 https://doi.org/10.1016/j.ijhydene.2024.03.184
 
 
