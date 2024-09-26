@@ -12,7 +12,7 @@ https://doi.org/10.13182/FST05-A967 <br>
 https://inldigitallibrary.inl.gov/sites/sti/sti/4215153.pdf
 
 V&V TMAP8 <br>
-https://mooseframework.inl.gov/TMAP8/verification/ver-list.html
+https://mooseframework.inl.gov/TMAP8/verification_and_validation/index.html
 
 V&V FESTIM (including Method of Manufactured Solution and Continuous integration) <br>
 https://doi.org/10.1088/1741-4326/abd95f <br>
