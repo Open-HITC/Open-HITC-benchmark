@@ -20,6 +20,7 @@ Hydrogen Isotope Inventory Processes Code (HIIPC) - 2012 <br>
 https://iopscience.iop.org/article/10.1088/0029-5515/52/4/043003
 
 TESSIM - 2012 <br>
+_Mathematica-based code_ <br>
 https://doi.org/10.1016/j.jnucmat.2012.04.003
 
 FACE - 2014 <br>
@@ -32,26 +33,34 @@ Diffusion Trapping Model of Isotopic eXchange (DITMIX) - 2016 <br>
 https://doi.org/10.1088/0031-8949/T167/1/014062
 
 Coupled Reaction–Diffusion Systems (CRDS) - 2018 <br>
+_Mathematica-based code_ <br>
 https://doi.org/10.1016/j.nimb.2018.05.037
 
-Based on Abaqus solver - 2019 <br>
+ABAQUS-based code - 2019 <br>
 https://doi.org/10.1016/j.nme.2019.01.023
 
 Finite Elements Simulation of Tritium in Materials (FESTIM) - 2019 <br>
+_FEniCS-based code_ <br>
 https://doi.org/10.1016/j.nme.2019.100709 <br>
 https://github.com/festim-dev/FESTIM 
 
-mHIT - 2021 <br>
+multi-trapping Hydrogen Isotopes Transport code (mHIT) - 2021 <br>
+_COMSOL-based code_ <br>
 https://doi.org/10.1016/j.fusengdes.2021.112740
 
 Tritium Migration Analysis Program (TMAP) v8 - 2023 <br>
+_MOOSE-based code_ <br>
 https://doi.org/10.1016/j.fusengdes.2024.114438 <br>
 https://mooseframework.inl.gov/TMAP8/ <br>
 https://github.com/idaholab/TMAP8
 
-Xolotl for H transport - 2023 <br>
+Xolotl (for H transport) - 2023 <br>
 https://doi.org/10.1088/1741-4326/acda4a <br>
 https://github.com/ORNL-Fusion/xolotl
+
+PermeAtion Solver for Tritium Analysis Foam (pastaFoam) - 2024 <br>
+_OpenFOAM-based code_ <br>
+https://doi.org/10.1016/j.fusengdes.2024.114362
 
 
 
