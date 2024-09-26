@@ -16,7 +16,7 @@ https://mooseframework.inl.gov/TMAP8/verification/ver-list.html
 
 V&V FESTIM (including Method of Manufactured Solution and Continuous integration) <br>
 https://doi.org/10.1088/1741-4326/abd95f <br>
-https://github.com/festim-dev/FESTIM
+https://festim-vv-report.readthedocs.io
 
 V&V mHIT (based on V&V TMAP7) <br>
 https://doi.org/10.1016/j.fusengdes.2021.112740
@@ -30,6 +30,9 @@ TESSIM, MHIMS and HIIPC for a TDS reproduction (in the frame of Eurofusion proje
 
 TMAP, ABAQUS and FESTIM for a diffusion in multimaterial slab <br>
 https://doi.org/10.1088/1741-4326/abd95f
+
+FESTIM, TMAP8, COMSOL for TDS and transport in 3D MB divertor
+https://doi.org/10.1016/j.ijhydene.2024.03.184
 
 
 
