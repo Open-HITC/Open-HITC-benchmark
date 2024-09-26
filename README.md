@@ -21,7 +21,7 @@ The purpose of the applied test cases is to verify the operational functions of 
 - B. Diffusion
     - B.1. [Multimaterial diffusion](IB1/README.md)
     - B.2. Multispecies diffusion
-    - B.3. Soret effect
+    - B.3. [Soret effect in W](IB3/README.md)
 - C. Boundary condition
     - C.1. Sievert BC
     - C.2. Neumann BC
@@ -32,8 +32,8 @@ The purpose of the applied test cases is to verify the operational functions of 
     - D.2. Trap creation with time
     - D.3. Discrete mutli-occupancy traps
 - E. Multidimensionnal
-    - E.1. 2D cases
-    - E.2. 3D cases
+    - E.1. 2D Divertor Monoblock cases
+    - E.2. 3D Divertor Monoblock cases
 - F. General
     - F.1. Unlimited traps
     - F.2. Unlimited traps
