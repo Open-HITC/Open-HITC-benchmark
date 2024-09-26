@@ -1,7 +1,7 @@
 
-# Existing codes
+# Existing codes for H transport
 
-To demonstrate the diversity of codes used in the community and the need to define common test cases, some identified codes used in the fusion community are listed
+To demonstrate the diversity of codes used in the community and the need to define common test cases, some identified codes used in the fusion community for H transport are listed
 
 DIFFUSE - 1978 <br>
 https://doi.org/10.1016/0022-3115(78)90160-5
@@ -48,6 +48,9 @@ Tritium Migration Analysis Program (TMAP) v8 - 2023 <br>
 https://mooseframework.inl.gov/TMAP8/ <br>
 https://github.com/idaholab/TMAP8
 
+Xolotl for H transport - 2023 <br>
+https://doi.org/10.1088/1741-4326/acda4a <br>
+https://github.com/ORNL-Fusion/xolotl
 
 
 
