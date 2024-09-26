@@ -1,10 +1,19 @@
 # Open HITC benchmark
 
-Open HITC (hydrogen isotope transport code) benchmark is a qualification tool for hydrogen transport codes. A series of test cases are provided to allow for verification and validation.
 
-We distinguish three types of verification tests: those applied to fusion problems (I), those with an analytical solution (II) and manufactured solutions (III).
+## Objectives
 
-## I. Applied tests
+Many [numerical codes](CODES.md) are developped to study hydrogen transport in materials. 
+
+A series of test cases are provided by developers for [verification and validation](EXAMPLES.md). 
+
+Open HITC (hydrogen isotope transport code) benchmark is designed to list test cases applied in order to cross-check the results of different codes. 
+Authors of published test cases can upload (or link to) their raw results and/or scripts with parameters to facilitate benchmarking: this avoids having to search the papers for every parameter (sometimes included in other papers) and digitise the curves yourself.
+
+The reproduction of applied examples of reference codes by several codes also shows that many codes could be used for qualification.
+
+## Applied cases
+
 The purpose of the applied test cases is to verify the operational functions of the codes, grouped by category (capital letter) and sub-category by increasing complexity (number). 
 
 - A. TDS reproduction 
@@ -30,18 +39,6 @@ The purpose of the applied test cases is to verify the operational functions of 
     - F.2. Unlimited traps
     - F.3. Code accessibility
 
-## II. Analytical tests
-
-(Tbd)
-
-## III. Manufactured solutions tests
-
-(Tbd)
-
-
-## Contribution synthesis
-
-<br>
 
 See also: 
 - [CODES.md](CODES.md) List of some existing codes
