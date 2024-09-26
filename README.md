@@ -32,8 +32,8 @@ The purpose of the applied test cases is to verify the operational functions of 
     - D.2. Trap creation with time
     - D.3. Discrete mutli-occupancy traps
 - E. Multidimensionnal
-    - E.1. 2D Divertor Monoblock cases
-    - E.2. 3D Divertor Monoblock cases
+    - E.1. [2D Divertor Monoblock cases](IE1/README.md)
+    - E.2. [3D Divertor Monoblock cases](IE2/README.md)
 - F. General
     - F.1. Unlimited traps
     - F.2. Unlimited traps
