@@ -43,5 +43,3 @@ The purpose of the applied test cases is to verify the operational functions of 
 See also: 
 - [CODES.md](CODES.md) List of some existing codes
 - [EXAMPLES.md](EXAMPLES.md) List of some verification and validation of existing codes
-
-*The project began as part of the ITER Science Fellow "Fuel retention" led by Tom Wauters.*
